@@ -19,3 +19,5 @@ Route::get('/', function () {
 use App\Http\Controllers\productcontroller;
 Route::get('/product/register', [productController::class , 'register']);
 Route::post('/product/register',[productController::class , 'store']); 
+Route::get('/Category/register', [CategoryController::class , 'register']);
+Route::post('/Category/register',[CategoryController::class , 'store']); 
