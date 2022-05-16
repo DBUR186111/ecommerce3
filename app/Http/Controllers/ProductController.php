@@ -48,4 +48,4 @@ class ProductController extends Controller
     }
 */
     
-}
+} 
