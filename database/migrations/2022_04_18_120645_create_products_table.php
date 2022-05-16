@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('unit')->nullable();
             $table->double('price',8,2)->nullable();
             $table->integer('quantity')->nullable();
-
+            $table->bigInteger('Catagory_id');
+           // $table->foreign('Catagory_id')->references('id')->on('Catagories')->onDelete('Cascade');
             $table->timestamps();
         });
     }
