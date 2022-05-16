@@ -8,6 +8,7 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     * 
      *
      * @return void
      */
@@ -15,13 +16,12 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string ('name');
-            $table->string('unit')->nullable();
-            $table->double('price',8,2)->nullable();
-            $table->integer('quantity')->nullable();
-            $table->bigInteger('Catagory_id');
-           // $table->foreign('Catagory_id')->references('id')->on('Catagories')->onDelete('Cascade');
             $table->timestamps();
+            $table->string('name');
+            $table->string('unit');
+            $table->string('price');
+            $table->string('quantity');
+            $table->unsignedBigInteger('catagory_id')->foreign('catagory_id')->references('id')->on('catagories')->onDelete('cascade');
         });
     }
 

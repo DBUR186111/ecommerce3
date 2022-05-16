@@ -4,31 +4,15 @@
  <div class="row justify-content-center">
  <div class="col-md-8">
  <div class="card">
- <div class="card-header">{{ __('Catagory Of Products') }}</div>
+ <div class="card-header">{{ __('ADD CATAGORY') }}</div>
  <div class="card-body">
- <form method="POST" action="{{ route('catagories/register') }}"
->
- 
- @csrf
- <div class="form-group row">
- <label for="id" class="col-md-4 col-formlabel text-md-right">{{ __('id') }}</label>
- <div class="col-md-6">
- <input id="id" type="text" class="formcontrol @error('id') isinvalid @enderror" name="id" value="{{ old('id') }}" required autocomplete="
-id" autofocus>
- @error('id')
- <span class="invalid-feedback" role="alert">
- <strong>{{ $message }}</strong>
- </span>
- @enderror
- 
- </div>
- </div>
+ <form method="POST" action="{{ route('Catagory/register') }}">
  @csrf
  <div class="form-group row">
  <label for="name" class="col-md-4 col-formlabel text-md-right">{{ __('name') }}</label>
  <div class="col-md-6">
- <input id="name" type="text" class="formcontrol @error('name') isinvalid @enderror" name="name" value="{{ old('name') }}" required autocomplete
-="name">
+ <input id="name" type="text" class="formcontrol @error('name') isinvalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="
+name" autofocus>
  @error('name')
  <span class="invalid-feedback" role="alert">
  <strong>{{ $message }}</strong>

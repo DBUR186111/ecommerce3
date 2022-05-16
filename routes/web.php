@@ -33,6 +33,3 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController ::class, 'index'])->name('home');
 Route::get('/product/get_all', [ProductController::class, 'get_all'])->name('product/get_all');
 Route::get('/product/search/{id}', [ProductController::class, 'get_by_id']);
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
